@@ -44,4 +44,5 @@ jobs:
           cache: true
 
       - run: vp install
+      - run: vp pack
       - run: vp test
