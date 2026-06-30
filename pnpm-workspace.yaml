@@ -13,7 +13,7 @@ catalogs:
     '@oxlint/plugins': ^1.70.0
     oxlint: ^1.70.0
   types:
-    '@types/node': '^25.9.3'
+    '@types/node': '^26.0.0'
     '@typescript/native-preview': 7.0.0-dev.20260618.1
     typescript: ^6.0.3
   scripts:
