@@ -67,8 +67,8 @@ export const stringCheck: Rule = defineRule({
 		let cachedOptionsString: string | null = null;
 
 		const checkText = (node: ESTree.Node) => {
-			const start = node.range[0];
-			const end = node.range[1];
+			const [start, end] = node.range;
+
 			const originalStr = sourceCode.slice(start, end);
 			const outputs: { from: string; to: string; index: number }[] = [];
 
@@ -77,18 +77,14 @@ export const stringCheck: Rule = defineRule({
 			});
 
 			for (const { from, to, index } of outputs) {
+				const lines = originalStr.slice(0, index).split('\n');
 				const loc = {
-					...node.loc.start,
+					line: node.loc.start.line + lines.length - 1,
+					column:
+						lines.length === 1
+							? node.loc.start.column + lines[0].length
+							: lines.at(-1)!.length,
 				};
-
-				for (let i = 0; i < index; i++) {
-					if (originalStr[i] === '\n') {
-						loc.line++;
-						loc.column = 0;
-					} else {
-						loc.column++;
-					}
-				}
 
 				context.report({
 					messageId: 'casePoliceError',
@@ -122,7 +118,7 @@ export const stringCheck: Rule = defineRule({
 
 				const currentOptionsString = JSON.stringify(options);
 
-				if (currentOptionsString !== cachedOptionsString || !dict) {
+				if (currentOptionsString !== cachedOptionsString) {
 					dict = loadDict(options);
 					cachedOptionsString = currentOptionsString;
 				}
@@ -130,12 +126,8 @@ export const stringCheck: Rule = defineRule({
 			Literal(node) {
 				if (typeof node.value === 'string') checkText(node);
 			},
-			JSXText(node) {
-				checkText(node);
-			},
-			TemplateElement(node) {
-				checkText(node);
-			},
+			JSXText: checkText,
+			TemplateElement: checkText,
 		};
 	},
 });
