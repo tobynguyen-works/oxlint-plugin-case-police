@@ -1,6 +1,6 @@
 {
 	"name": "oxlint-plugin-case-police",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Oxlint plugin for case-police",
 	"keywords": [
 		"case-police",
