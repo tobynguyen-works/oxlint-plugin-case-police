@@ -17,7 +17,7 @@ catalogs:
     '@typescript/native-preview': 7.0.0-dev.20260618.1
     typescript: ^6.0.3
   scripts:
-    bumpp: ^11.1.0
+    tegami: ^1.0.2
   prod:
     mlly: ^1.8.2
     pathe: ^2.0.3
@@ -45,3 +45,4 @@ minimumReleaseAgeExclude:
   - '@typescript/native-preview-win32-arm64@7.0.0-dev.20260618.1'
   - '@typescript/native-preview-win32-x64@7.0.0-dev.20260618.1'
   - '@typescript/native-preview@7.0.0-dev.20260618.1'
+  - tegami@1.0.2

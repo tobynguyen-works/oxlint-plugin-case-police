@@ -38,7 +38,7 @@
 		"check": "vp check",
 		"prepublishOnly": "vp run build",
 		"prepare": "vp config",
-		"bump": "bumpp"
+		"tegami": "node scripts/tegami.mts"
 	},
 	"dependencies": {
 		"case-police": "catalog:prod",
@@ -49,7 +49,7 @@
 	"devDependencies": {
 		"@types/node": "catalog:types",
 		"@typescript/native-preview": "catalog:types",
-		"bumpp": "catalog:scripts",
+		"tegami": "catalog:scripts",
 		"typescript": "catalog:types",
 		"vite-plus": "catalog:build"
 	},
