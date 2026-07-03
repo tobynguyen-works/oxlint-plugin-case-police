@@ -7,15 +7,15 @@
 		"oxlint",
 		"oxlint-plugin"
 	],
-	"homepage": "https://github.com/tobynguyen27/oxlint-plugin-case-police#readme",
+	"homepage": "https://github.com/tobynguyen-works/oxlint-plugin-case-police#readme",
 	"bugs": {
-		"url": "https://github.com/tobynguyen27/oxlint-plugin-case-police/issues"
+		"url": "https://github.com/tobynguyen-works/oxlint-plugin-case-police/issues"
 	},
 	"license": "MIT",
 	"author": "Toby Nguyen <hi@tobynguyen.net>",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/tobynguyen27/oxlint-plugin-case-police.git"
+		"url": "git+https://github.com/tobynguyen-works/oxlint-plugin-case-police.git"
 	},
 	"files": [
 		"dist"
