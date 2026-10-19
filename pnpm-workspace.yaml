@@ -21,7 +21,7 @@ catalogs:
   prod:
     mlly: ^1.8.2
     pathe: ^2.0.3
-    synckit: ^0.11.13
+    synckit: ^0.12.0
     case-police: ^2.2.1
 
 overrides:
