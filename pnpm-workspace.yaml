@@ -9,7 +9,7 @@ catalogs:
     vite: npm:@voidzero-dev/vite-plus-core@latest
     vite-plus: ^1.0.0
   dev:
-    vitest: ^4.1.9
+    vitest: ^5.0.0
     '@oxlint/plugins': ^1.72.0
     oxlint: ^1.72.0
   types:
